@@ -2,7 +2,9 @@ pipeline {
   agent none
   stages {
     stage ('Checkout') {
-      println('Checking out...')
+      steps {
+        println('Checking out...')
+      }
     }
   }
 }
