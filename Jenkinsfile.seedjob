@@ -1,0 +1,16 @@
+pipeline {
+  agent any
+  environment {
+    BUILD_NUMBER = "${env.BUILD_NUMBER}"
+    WORKSPACE    = "${env.WORKSPACE}"
+  }
+  stages {
+    stage('Create jobs') {
+      steps {
+        script {
+          sh "jenkins-jobs --conf jjb/config.ini update jjb/demo_project/jobs.yaml:jjb/template.yaml"
+        }
+      }
+    }
+  }
+}
