@@ -1,0 +1,17 @@
+pipeline {
+  agent any
+  environment {
+    BUILD_NUMBER = "${env.BUILD_NUMBER}"
+    WORKSPACE    = "${env.WORKSPACE}"
+  }
+  parameters {
+    string(name: 'build_number')
+  }
+  stages {
+    stage('Tag release') {
+      steps {
+        println('Promoting...')
+      }
+    }
+  }
+}
