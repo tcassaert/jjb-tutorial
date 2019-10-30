@@ -6,4 +6,4 @@
       - 'pipeline_template'
     custom_parameters:
       - string:
-          name: build_number
+          name: upstream_build_number
