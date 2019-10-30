@@ -1,4 +1,4 @@
 ---
 - job:
-    name: 'promotions'
+    name: 'promotion_jobs'
     project-type: folder

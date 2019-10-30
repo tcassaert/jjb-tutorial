@@ -31,7 +31,7 @@ pipeline {
           def project_cfg = readYaml file: 'jjb/demo_project/promotions/jobs.yaml'
           def project_name = 'demo_project'
           project_cfg.project[0].name = project_name + '-' + "${BUILD_NUMBER}"
-          project_cfg.project[0].folder = 'promotions/demo_project'
+          project_cfg.project[0].folder = 'promotion_jobs'
           def date = new Date().format('yyyyMMdd')
           project_cfg.project[0].custom_parameters[0].default = "demo_project-${date}-${BUILD_NUMBER}.tar.gz"
           sh "rm jjb/demo_project/promotions/jobs.yaml"
