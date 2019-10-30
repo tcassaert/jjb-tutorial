@@ -28,7 +28,7 @@ pipeline {
           def project_name = 'demo_project'
           project_cfg.project[0].name = project_name + '-' + "${BUILD_NUMBER}"
           project_cfg.project[0].folder = 'promotions/demo_project'
-          project_cfg.project[0].custom_parameters[0].default = 'upstream_build_number'
+          project_cfg.project[0].custom_parameters[0].default = "${BUILD_NUMBER}"
           sh "rm jjb/demo_project/promotions/jobs.yaml"
           writeYaml file: 'jjb/demo_project/promotions/jobs.yaml', data: project_cfg
           sh "sed -i 's/^      default/        default/' jjb/demo_project/promotions/jobs.yaml"
