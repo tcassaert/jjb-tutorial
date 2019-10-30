@@ -32,7 +32,7 @@ pipeline {
           sh "rm jjb/demo_project/promotions/jobs.yaml"
           writeYaml file: 'jjb/demo_project/promotions/jobs.yaml', data: project_cfg
           sh "sed -i 's/^      default/        default/' jjb/demo_project/promotions/jobs.yaml"
-          sh "jenkins-jobs --conf jjb/config.ini update jjb/demo_project/promotions:jjb/templates.yaml"
+          sh "jenkins-jobs --conf jjb/config.ini update jjb/demo_project/promotions:jjb/template.yaml"
         }
       }
     }
