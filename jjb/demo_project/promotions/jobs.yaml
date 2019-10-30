@@ -1,6 +1,11 @@
 ---
+- job:
+    name: 'promotions'
+    project-type: folder
+
 - project:
     url: 'https://github.com/tcassaert/jjb-tutorial'
+    folder: 'promotions'
     jenkinsfile_location: 'Jenkinsfile.promote'
     jobs:
       - 'pipeline_template'
