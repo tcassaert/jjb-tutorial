@@ -1,6 +1,7 @@
 ---
 - project:
     name: 'Demo project'
+    folder: ''
     jobs:
       - 'pipeline_template':
           name: 'demo_project'
