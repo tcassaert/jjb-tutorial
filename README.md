@@ -181,7 +181,7 @@ If we now try to build this promotion job, the parameter is already filled in wi
 
 This promotion job just shows how you can download the exact package you want to promote from your registry and do the necessary steps with that package in your promotion process.
 
-At my customer, this is all included in a Jenkins shared library, but this is overkill for this simple demo project.
+At my customer, this is all included in a Jenkins shared library, but this is overkill for this simple demo project. The jjb configuration files are also in their own repository to have an overview of all job configurations.
 
 ## Conclusion
 
