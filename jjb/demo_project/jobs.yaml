@@ -1,7 +1,11 @@
 ---
+- job:
+    name: 'demo_project'
+    project-type: folder
+
 - project:
     name: 'Demo project'
-    folder: ''
+    folder: 'demo_project'
     jobs:
       - 'pipeline_template':
           name: 'demo_project'
