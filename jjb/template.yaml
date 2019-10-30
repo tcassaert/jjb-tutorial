@@ -1,0 +1,13 @@
+---
+- job-template:
+    name: '{name}'
+    id: 'pipeline_template'
+    project-type: 'pipeline'
+    pipeline-scm:
+      scm:
+        - git:
+            url: '{url}'
+            branches:
+              - '*/master'
+      script-path: '{jenkinsfile_location|Jenkinsfile}'
+      lightweigth-checkout: true

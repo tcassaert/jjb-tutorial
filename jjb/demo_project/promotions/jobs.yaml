@@ -1,0 +1,9 @@
+---
+- project:
+    url: 'https://github.com/tcassaert/jjb-tutorial'
+    jenkinsfile_location: 'Jenkinsfile.promote'
+    jobs:
+      - 'pipeline_template'
+    custom_parameters:
+      - string:
+          name: build_number

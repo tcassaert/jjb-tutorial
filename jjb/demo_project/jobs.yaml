@@ -1,0 +1,7 @@
+---
+- project:
+    name: 'Demo project'
+    jobs:
+      - 'pipeline_template':
+          name: 'demo_project'
+          url: 'https://github.com/tcassaert/jjb-tutorial'
