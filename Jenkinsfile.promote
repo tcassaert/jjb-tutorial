@@ -5,12 +5,12 @@ pipeline {
     WORKSPACE    = "${env.WORKSPACE}"
   }
   parameters {
-    string(name: 'build_number')
+    string(name: 'package_name')
   }
   stages {
-    stage('Tag release') {
+    stage('Get package') {
       steps {
-        println('Promoting...')
+        println("Downloading ${package_name} from registry")
       }
     }
   }
