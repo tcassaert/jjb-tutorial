@@ -13,5 +13,15 @@ pipeline {
         println("Downloading ${package_name} from registry")
       }
     }
+    stage('Deploy package on prod') {
+      steps {
+        println("Deploying ${package_name} on prod hosts")
+      }
+    }
+    stage('Push package') {
+      steps {
+        println("Pushing ${package_name} to prod registry")
+      }
+    }
   }
 }
