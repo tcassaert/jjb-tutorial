@@ -1,8 +1,13 @@
 ---
+- defaults:
+    name: global
+    custom_parameters: []
+
 - job-template:
     name: '{name}'
     id: 'pipeline_template'
     project-type: 'pipeline'
+    parameters: '{obj:custom_parameters}'
     pipeline-scm:
       scm:
         - git:
