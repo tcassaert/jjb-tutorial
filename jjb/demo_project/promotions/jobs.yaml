@@ -6,4 +6,4 @@
       - 'pipeline_template'
     custom_parameters:
       - string:
-          name: upstream_build_number
+          name: package_name
