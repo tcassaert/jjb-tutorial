@@ -6,6 +6,7 @@
 - job-template:
     name: '{name}'
     id: 'pipeline_template'
+    folder: '{folder}'
     project-type: 'pipeline'
     parameters: '{obj:custom_parameters}'
     pipeline-scm:
