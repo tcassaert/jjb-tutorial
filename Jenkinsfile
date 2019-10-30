@@ -17,10 +17,12 @@ pipeline {
     }
     stage ('Package') {
       steps {
-        println('Packaging project...')
-        def date = new Date().format('yyyyMMdd')
-        sh "tar -cf demo_project-${date}-${BUILD_NUMBER}.tar.gz src/"
-        println('Pushing package to the registry...')
+        script {
+          println('Packaging project...')
+          def date = new Date().format('yyyyMMdd')
+          sh "tar -cf demo_project-${date}-${BUILD_NUMBER}.tar.gz src/"
+          println('Pushing package to the registry...')
+        }
       }
     }
     stage ('Create promotion job') {
